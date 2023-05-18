@@ -1,0 +1,38 @@
+---
+title: "PROPEL Final Project"
+output: html_notebook
+---
+
+# PROPEL Final Project
+
+## By: Erika Cota and Natalia Santiago 
+
+Behavioral analysis of how populations are responding to the pandemic - based on a monthly survey where respondents note counts of various activities along with a 0-100 score related to how much they agree with a given statement
+
+### The Data Set
+
+The data set being used in this project has information about peoples behavior as the COVID-19 pandemic progresses. The data is divided by country and was collected using monthly surveys where people were asked whether they participate in certain activities and how much they agree with provided statements on scale of 0-100.
+
+Using this data set we are interested in seeing how behaviors change as the pandemic progressed and how these behavioral patterns change between different countries.
+
+DATA SET LINK: <https://corgis-edu.github.io//corgis/csv/covid_behaviors/>
+
+### Answering Our Question 
+
+Importing the necessary libraries into the notebook.
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+covid_behaviors_df <- read_csv("covid_behaviors.csv")
+```
+
+```{r}
+covid_behaviors_df
+```
+
+```{r}
+distinct(covid_behaviors_df, Country, .keep_all = FALSE)
+```
